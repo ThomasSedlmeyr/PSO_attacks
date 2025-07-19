@@ -1,0 +1,29 @@
+experiment_name: "different_epsilons_new"
+
+attack_type: "black_box" # white_box or black_box
+
+dataset_name: "adult" # adult or fire
+classifier_model: "extra_trees" # "gradient_boosting", "random_forest", "extra_trees"
+size_x: 1000
+size_d: 5000
+epsilon: 100
+n_synthetic_datasets: 10 # The number of synthetic datasets sampled from one trained model
+num_shadow_datasets: 2 # The number of shadow datasets and classifiers which are generated
+num_shadow_pairs: 1000 # The number of pairs where in one part the target sample is contained, while in the other one
+                       # the target is missing
+train_fraction: 0.8  # The fraction of the shadow pairs which is used for training the classifiers
+synthetic_model: "privbayes_data_syn" # privbayes_dpart, privbayes_syn_gen, privbayes_data_syn, marginal, synthpop
+sample_with_replacement: False
+num_reps_for_so_acc: 100 # The number of synthetic generated datasets used for the evaluation computing the final
+                          # singling out accuracy
+max_workers: 22
+build_synthetic_models_in_parallel: True
+path_data: "/mnt/data/Dokumente/Studium/Master/Semester_4/Guided_Research/own_code/PSO_attacks/datasets/"
+output_path: "/mnt/data/Dokumente/Studium/Master/Semester_4/Guided_Research/own_code/PSO_attacks/output/"
+temp_path: "/home/thomas/Downloads/temp/"
+
+path_decision_tree_attack_data: "/mnt/data/Dokumente/Studium/Master/Semester_4/Guided_Research/own_code/PSO_attacks/output/decision_tree_attack_data/"
+path_decision_tree_attack_trees: "/mnt/data/Dokumente/Studium/Master/Semester_4/Guided_Research/own_code/PSO_attacks/output/decision_tree_attack_trees/"
+#path_data: "/vol/aimspace/users/sedlmeyr/PSO_attacks/datasets/"
+#output_path: "/vol/aimspace/users/sedlmeyr/PSO_attacks/output/different_epsilons_new/"
+#temp_path: "/vol/aimspace/users/sedlmeyr/PSO_attacks/output/temp/"

@@ -1,0 +1,19 @@
+name: pso-attacks-2
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
+  - tqdm
+  - dill
+  - pip:
+    - -e libs/optimized_qbs/
+    - synthetic-data-generation
+    - xgboost
+    - seaborn
+    - python-box
+    - pyyaml
+    - DataSynthesizer
+    - numba
+    - liac-arff
+    #- dpart
